@@ -172,4 +172,8 @@ nav a:hover{
     .introduction h1{
         font-size: 46px;
     }
+    header h1{
+    font-size: 2rem;
+    font-weight: 200;
+    }
 }
