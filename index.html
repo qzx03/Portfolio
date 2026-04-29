@@ -3,56 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A. El Morabiti | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>A. El Morabiti | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css?v=1.2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     
-<div class="container">
-    <header>   
-        <div class="logo">
-            <h1 class="first-Name">A. </h1>
-            <h1 class="last-Name">El Morabiti</h1>
-        </div>
-        <button class="navbar-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-</div>
+<header>   
+    <div class="logo">
+        <h1 class="first-Name">A. </h1>
+        <h1 class="last-Name">El Morabiti</h1>
+    </div>
+    <button class="navbar-toggle" aria-label="Toggle Navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <nav>
+        <a href="#">About</a>
+        <a href="#skills">Skills & Education</a>
+        <a href="#experience">Experience & Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<section class="hero">
-    <div class="introduction">
+<main class="hero">
+    <!-- ABOUT SECTION -->
+    <section class="introduction">
         <h1>HI, MY NAME IS</h1>
         <p class="subtitle">full stack web developer specializing in backend logic</p>
         <h1>AHMED EL MORABITI</h1>
-    </div>
-
+    </section>
     <div class="about-window">
-        <div class="terminal-header">
-            <span class="dots"></span>
-            <span class="terminal-title">about_me.php</span>
+            <div class="terminal-header">
+                <span class="dots"></span>
+                <span class="terminal-title">about_me.php</span>
+            </div>
+            <div class="about-content">
+                <p>
+                    I'm a web development student currently training at <span>Solicode</span>.
+                    I focus on building web applications using <span>HTML, CSS, JavaScript, PHP, and MySql</span>.
+                    I live for the logic behind the layout—specializing in <span>functional systems</span> like forms and file handling.
+                </p>
+            </div>
         </div>
-        <div class="about-content">
-            <p>
-                I'm a web development student currently training at <span>Solicode</span>.
-                I focus on building web applications using <span style="color: #e34f26;">HTML</span>, <span style="color: #1572b6;">CSS</span>, <span style="color: #f7df1e;">JavaScript</span>, <span style="color: #8d72b1;">PHP</span>, and <span style="color: #00758f;">MySql</span>.
-                I'm especially interested in <span>backend logic</span> and creating functional systems like forms and file handling.
-                My goal is to become a skilled web developer and continue improving my problem-solving abilities.
-            </p>
+
+    <!-- SKILLS & EDUCATION SECTION -->
+    <section id="skills" class="section-container">
+        <br><br><br><br>
+        <h2 class="section-title">SKILLS & EDUCATION</h2>
+        <div class="grid-layout">
+            <div class="card terminal-style">
+                <h3>Technical Stack</h3>
+                <ul class="skills-list">
+                    <li><span class="dot html"></span><span style="color: #e34f26;"><i class="fa-brands fa-html5"></i> HTML5</span></li>
+                    <li><span class="dot css"></span><span style="color: #1572b6;"><i class="fa-brands fa-css3-alt"></i> CSS3</span></li>
+                    <li><span class="dot js"></span><span style="color: #f7df1e;"><i class="fa-brands fa-js"></i> JavaScript</span></li>
+                    <li><span class="dot php"></span><span style="color: #8892be;"><i class="fa-brands fa-php"></i> PHP</span></li>
+                    <li><span class="dot mysql"></span><span style="color: #00758f;"><i class="fa-solid fa-database"></i> MySQL</span></li>
+                    <li><span class="dot git"></span><span style="color: #8892be;"><i class="fa-brands fa-github"></i> Git/Github</span></li>
+                </ul>
+            </div>
+            <div class="card terminal-style">
+                <h3>Education:</h3><br>
+                <div class="edu-item">
+                    <h4>Web Development Diploma</h4>
+                    <p>Solicode - Tangier, Morocco</p>
+                    <p class="date">2025 - Present</p>
+                </div><br>
+                <div class="edu-item">
+                    <h4>Management in College</h4>
+                    <p>University of Abdelmalek Essadi</p>
+                    <p class="date">2025 - Present</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- EXPERIENCE & PROJECTS SECTION -->
+    <section id="experience" class="section-container">
+        <h2 class="section-title">EXPERIENCE & PROJECTS</h2>
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Responsive Portfolio Project</h3>
+                <p class="tag">Frontend</p>
+                <p>Developed a high-performance portfolio featuring custom CSS skews, glassmorphism, and responsive mobile navigation.</p>
+                <div class="stack-icons">
+                    <span style="color: #e34f26;"><i class="fa-brands fa-html5"></i></span>
+                    <span style="color: #1572b6;"><i class="fa-brands fa-css3-alt"></i></span>
+                    <span style="color: #f7df1e;"><i class="fa-brands fa-js"></i></span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/qzx03/Portfolio" target="_blank" class="btn">View Source Code</a>
+                </div>
+            </div>
+            <div class="project-visual">
+                <div class="placeholder-img">Project Visual (Image/Video)</div>
+            </div>
+        </div>
+
+        <!-- Project 2 Placeholder -->
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Recipe List App</h3>
+                <p class="tag">Backend / Database CRUD</p>
+                <p>An application that displays recipes from a MySql database and allows the user to add, update and delete recipes.</p>
+                <div class="stack-icons">
+                    <span style="color: #e34f26;"><i class="fa-brands fa-html5"></i></span>
+                    <span style="color: #1572b6;"><i class="fa-brands fa-css3-alt"></i></span>
+                    <span style="color: #8892be;"><i class="fa-brands fa-php"></i></span>
+                    <span style="color: #00758f;"><i class="fa-solid fa-database"></i></span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/qzx03/PDO-prototype-2/tree/main/realisation" class="btn secondary">View Source Code</a>
+                </div>
+            </div>
+            <div class="project-visual">
+                <div class="placeholder-img">Project Visual (Image/Video)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-container">
+        <h2 class="section-title">CONTACT</h2>
+        <div class="terminal-style contact-box">
+            <p>Ready to build something logic driven? Drop a message.</p>
+            <div class="socials">
+                <a href="mailto:ahmedelmorabiti123460@gmail.com">Email</a><br>
+                <a href="www.linkedin.com/in/ahmed-el-morabiti-796962406">LinkedIn</a><br>
+                <a href="https://github.com/qzx03">GitHub</a>
+            </div>
+        </div>
+    </section>
+</main>
 
 <script src="script.js"></script>
 </body>

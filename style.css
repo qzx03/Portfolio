@@ -195,8 +195,153 @@ nav a:hover {
     nav.active { display: flex; }
 
     .introduction h1 { font-size: 40px; }
+
+    header h1 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    }
 }
 
 @keyframes shine {
     to { background-position: 200% center; }
+}
+
+/* --- Root Variables & Base --- */
+:root {
+    --primary-blue: #76a1ff;
+    --bg-dark: #0d0d0d;
+    --card-bg: rgba(28, 35, 53, 0.6);
+    --html: #e34f26; --css: #1572b6; --js: #f7df1e; --php: #8892be;
+}
+
+html { 
+    scroll-behavior: smooth;
+    }
+
+body {
+    background: var(--bg-dark);
+    color: #e7e7e7;
+    font-family: system-ui, sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- Navigation Fixes --- */
+header {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem max(20px, 5%);
+    position: fixed;
+    top: 0; width: 100%; z-index: 1000;
+}
+
+/* --- Section Layouts --- */
+.section-container {
+    padding: 100px 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: "Alfa Slab One", serif;
+    color: var(--primary-blue);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 0px #000;
+}
+
+/* --- Grid & Cards --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.terminal-style {
+    background: var(--card-bg);
+    border: 1px solid rgba(118, 161, 255, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+/* --- Projects --- */
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--card-bg);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    border: 1px solid rgba(118, 161, 255, 0.1);
+}
+
+.project-info { padding: 40px; flex: 1; min-width: 300px; }
+.project-visual { 
+    flex: 1; min-width: 300px; 
+    background: #161b22; 
+    display: flex; justify-content: center; align-items: center;
+    color: var(--primary-blue);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-blue);
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* --- Footer/Contact --- */
+.contact-box { text-align: center; }
+.contact-link { font-size: 1.5rem; color: var(--primary-blue); text-decoration: none; display: block; margin: 20px 0; }
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+    .project-card { flex-direction: column; }
+    .section-title { font-size: 1.8rem; }
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+
+/* Base state: Hidden and slightly shifted down */
+.section-container, .about-window {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    visibility: hidden; /* Prevents clicking links in hidden sections */
+}
+
+.introduction {
+    opacity: 0;
+    transform: translateY(20px) skewY(-2deg); /* Combined here */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    visibility: hidden;
+}
+
+/* Visible state */
+.section-container.show, .about-window.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.introduction.show {
+    opacity: 1;
+    transform: translateY(0) skewY(-2deg); /* Combined here */
+    visibility: visible;
 }
