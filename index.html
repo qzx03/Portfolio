@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>A. El Morabiti | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
 <div class="container">
     <header>   
         <div class="logo">
-        <h1 class="first-Name">A. </h1>
-        <h1 class="last-Name">El Morabiti</h1>
+            <h1 class="first-Name">A. </h1>
+            <h1 class="last-Name">El Morabiti</h1>
         </div>
         <button class="navbar-toggle">
             <span class="bar"></span>
@@ -23,20 +23,36 @@
             <span class="bar"></span>
         </button>
         <nav>
-            <a href="#">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Experience</a>
-            <a href="#">Contact</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 </div>
 
-<div class="introduction">
-    <h1>HI, MY NAME IS</h1>
-    <p>full stack web developer specializing in backend logic</p>
-    <h1>AHMED EL MORABITI</h1>
-</div>
+<section class="hero">
+    <div class="introduction">
+        <h1>HI, MY NAME IS</h1>
+        <p class="subtitle">full stack web developer specializing in backend logic</p>
+        <h1>AHMED EL MORABITI</h1>
+    </div>
 
+    <div class="about-window">
+        <div class="terminal-header">
+            <span class="dots"></span>
+            <span class="terminal-title">about_me.php</span>
+        </div>
+        <div class="about-content">
+            <p>
+                I'm a web development student currently training at <span>Solicode</span>.
+                I focus on building web applications using <span style="color: #e34f26;">HTML</span>, <span style="color: #1572b6;">CSS</span>, <span style="color: #f7df1e;">JavaScript</span>, <span style="color: #8d72b1;">PHP</span>, and <span style="color: #00758f;">MySql</span>.
+                I'm especially interested in <span>backend logic</span> and creating functional systems like forms and file handling.
+                My goal is to become a skilled web developer and continue improving my problem-solving abilities.
+            </p>
+        </div>
+    </div>
+</section>
 
 <script src="script.js"></script>
 </body>

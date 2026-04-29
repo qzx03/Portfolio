@@ -4,117 +4,81 @@
     box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
     background: #0d0d0d;
     color: #e7e7e7;
+    font-family: system-ui, -apple-system, sans-serif;
     min-height: 100vh;
-    line-height: 1.5;
+    overflow-x: hidden;
 }
 
-.container{
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    overflow: hidden;
-}
-
-header{
+header {
     background-color: #1a1a1a;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1rem 5rem;
-    z-index: 999;
+    padding: 1rem max(20px, 5%);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1{
-    margin: 0;
-    font-size: 3rem;
+header h1 {
+    font-size: 2.5rem;
     font-weight: 300;
 }
 
-.first-Name{
+.logo {
+    display: flex;
+}
+
+.first-Name {
     color: rgb(118, 161, 255);
     text-shadow: 0 0 15px rgba(118, 161, 255, 0.4);
 }
 
-.logo{
+nav {
     display: flex;
-    margin-left: -55px;
+    gap: 2rem;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    background-color: #1a1a1a;
-    z-index: 998;
-}
-
-nav a{
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
-    transition: color 0.2s ease, transform 0.2s ease;
+nav a {
     text-decoration: none;
     color: inherit;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    transition: 0.3s;
 }
 
-nav a:hover{
+nav a:hover {
     color: rgb(118, 161, 255);
-    transform: translateY(-3px);
-}
-.navbar-toggle{
-    display: none;
-    background: transparent;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
 }
 
-.bar{
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-
-
-
-.introduction{
+.hero {
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+
+.introduction {
     text-align: center;
-    transform: skewY(2deg);
-    margin-top: 5px;
+    transform: skewY(-2deg);
+    margin-bottom: 50px;
 }
 
 .introduction h1 {
-    font-weight: normal;
-    font-size: 64px;
     font-family: "Alfa Slab One", serif;
-    
-    /* Set up the gradient background here first */
+    font-size: clamp(32px, 8vw, 64px);
+    line-height: 1.1;
     background: linear-gradient(to right, #76a1ff, #e7e7e7, #76a1ff);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: white; 
-    transition: -webkit-text-fill-color 0.5s ease, text-shadow 0.5s ease;
-}
-
-.introduction p{
-    font-size: 18px;
-    border-bottom: solid 1px gray;
-    border-right: solid 1px gray;
-    padding: 5px;
-    
+    transition: 0.5s ease;
+    font-weight: normal;
 }
 
 .introduction:hover h1 {
@@ -122,70 +86,117 @@ nav a:hover{
     animation: shine 3s linear infinite;
 }
 
-@keyframes shine {
-    to {
-        background-position: 200% center;
-    }
+.subtitle {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    background: #76a1ff;
+    color: #0d0d0d;
+    padding: 5px 15px;
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transform: skewX(10deg);
 }
 
+.about-window {
+    max-width: 750px;
+    width: 100%;
+    background: rgba(28, 35, 53, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(118, 161, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
 
+.terminal-header {
+    background: rgba(118, 161, 255, 0.1);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(118, 161, 255, 0.2);
+}
+
+.dots::before {
+    content: "● ● ●";
+    letter-spacing: 3px;
+    font-size: 12px;
+    color: #76a1ff;
+    opacity: 0.5;
+}
+
+.terminal-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: #76a1ff;
+}
+
+.about-content {
+    padding: 40px;
+}
+
+.about-content p {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+.about-content span {
+    color: #76a1ff;
+    text-shadow: 0 0 10px rgba(118, 161, 255, 0.3);
+}
+
+.navbar-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
 
 @media (max-width: 880px) {
-    .container{
-        backdrop-filter: none;
-    }
-
-    header nav{
+    .navbar-toggle { display: block; }
+    
+    nav {
         display: none;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1.7rem !important;
         position: absolute;
-        height: 100vh;
-        width: 250px;
-        top: 0;
+        top: 100%;
         right: 0;
-        padding: 5rem 1.5rem;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        background: #1a1a1a;
+        width: 250px;
+        height: 100vh;
+        padding: 2rem;
     }
 
-    .navbar-toggle{
-        display: block;
-        z-index: 999;
-    }
+    nav.active { display: flex; }
 
-    header nav.active{
-        display: flex;
-    }
-
-    .navbar-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .navbar-toggle.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg); 
-    }
-
-    .navbar-toggle.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg); 
-    }
-    .introduction h1{
-        font-size: 46px;
-    }   
+    .introduction h1 { font-size: 40px; }
 }
 
-@media (max-width: 550px) {
-    header h1{
-    font-size: 2rem;
-    font-weight: 200;
-    }
-
-    .introduction h1{
-        font-size: 36px;
-    }
-
-    .introduction p{
-        font-size: 12px;
-    }
-    
+@keyframes shine {
+    to { background-position: 200% center; }
 }
