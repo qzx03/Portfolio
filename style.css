@@ -52,6 +52,7 @@ nav{
     align-items: center;
     gap: 3rem;
     background-color: #1a1a1a;
+    z-index: 998;
 }
 
 nav a{
@@ -82,6 +83,52 @@ nav a:hover{
     background-color: #fff;
     transition: all 0.3s ease-in-out;
 }
+
+
+
+.introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: skewY(2deg);
+    margin-top: 5px;
+}
+
+.introduction h1 {
+    font-weight: normal;
+    font-size: 64px;
+    font-family: "Alfa Slab One", serif;
+    
+    /* Set up the gradient background here first */
+    background: linear-gradient(to right, #76a1ff, #e7e7e7, #76a1ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: white; 
+    transition: -webkit-text-fill-color 0.5s ease, text-shadow 0.5s ease;
+}
+
+.introduction p{
+    font-size: 18px;
+    border-bottom: solid 1px gray;
+    border-right: solid 1px gray;
+    padding: 5px;
+    
+}
+
+.introduction:hover h1 {
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
 
 @media (max-width: 880px) {
     .container{
@@ -122,47 +169,7 @@ nav a:hover{
     .navbar-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg); 
     }
-}
-
-.introduction{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: skewY(2deg);
-    margin-top: 5px;
-}
-
-.introduction h1 {
-    font-size: 64px;
-    font-family: "Alfa Slab One", serif;
-    
-    /* Set up the gradient background here first */
-    background: linear-gradient(to right, #76a1ff, #e7e7e7, #76a1ff);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: white; 
-    transition: -webkit-text-fill-color 0.5s ease, text-shadow 0.5s ease;
-}
-
-.introduction p{
-    font-size: 18px;
-    border-bottom: solid 1px gray;
-    border-right: solid 1px gray;
-    padding: 5px;
-    
-}
-
-.introduction:hover h1 {
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s linear infinite;
-}
-
-@keyframes shine {
-    to {
-        background-position: 200% center;
+    .introduction h1{
+        font-size: 46px;
     }
 }
-
-
-
