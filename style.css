@@ -345,3 +345,8 @@ header {
     transform: translateY(0) skewY(-2deg); /* Combined here */
     visibility: visible;
 }
+
+.pfmu {
+    width: 90%;
+    border-radius: 10px;
+}
