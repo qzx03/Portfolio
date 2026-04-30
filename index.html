@@ -12,11 +12,15 @@
 </head>
 <body>
     
-<header>   
+<header><a href="#" class="logo-a"> 
     <div class="logo">
-        <h1 class="first-Name">A. </h1>
+        <h1 class="bracket">&lt;</h1>
+        <h1 class="first-Name">A</h1>
+        <h1 class="dot">.</h1>
         <h1 class="last-Name">El Morabiti</h1>
+        <h1 class="bracket"> /&gt;</h1>
     </div>
+    </a> 
     <button class="navbar-toggle" aria-label="Toggle Navigation">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -31,11 +35,10 @@
 </header>
 
 <main class="hero">
-    <!-- ABOUT SECTION -->
     <section class="introduction">
         <h1>HI, MY NAME IS</h1>
-        <p class="subtitle">full stack web developer specializing in backend logic</p>
         <h1>AHMED EL MORABITI</h1>
+        <p class="subtitle">full stack web developer specializing in backend logic</p>
     </section>
     <div class="about-window">
             <div class="terminal-header">
@@ -51,43 +54,39 @@
             </div>
         </div>
 
-    <!-- SKILLS & EDUCATION SECTION -->
     <section id="skills" class="section-container">
         <br><br><br><br>
         <h2 class="section-title">SKILLS & EDUCATION</h2>
         <div class="grid-layout">
             <div class="card terminal-style">
-                <h3>Technical Stack</h3>
+                <h3>Technical Stack:</h3><br>
                 <ul class="skills-list">
-                    <li><span class="dot html"></span><span style="color: #e34f26;"><i class="fa-brands fa-html5"></i> HTML5</span></li>
-                    <li><span class="dot css"></span><span style="color: #1572b6;"><i class="fa-brands fa-css3-alt"></i> CSS3</span></li>
-                    <li><span class="dot js"></span><span style="color: #f7df1e;"><i class="fa-brands fa-js"></i> JavaScript</span></li>
-                    <li><span class="dot php"></span><span style="color: #8892be;"><i class="fa-brands fa-php"></i> PHP</span></li>
-                    <li><span class="dot mysql"></span><span style="color: #00758f;"><i class="fa-solid fa-database"></i> MySQL</span></li>
-                    <li><span class="dot git"></span><span style="color: #8892be;"><i class="fa-brands fa-github"></i> Git/Github</span></li>
+                    <li><span style="color: #e34f26;"><i class="fa-brands fa-html5"></i> HTML5</span></li>
+                    <li><span style="color: #1572b6;"><i class="fa-brands fa-css3-alt"></i> CSS3</span></li>
+                    <li><span style="color: #f7df1e;"><i class="fa-brands fa-js"></i> JavaScript</span></li>
+                    <li><span style="color: #8892be;"><i class="fa-brands fa-php"></i> PHP</span></li>
+                    <li><span style="color: #00758f;"><i class="fa-solid fa-database"></i> MySQL</span></li>
+                    <li><span style="color: #8892be;"><i class="fa-brands fa-github"></i> Git/Github</span></li>
                 </ul>
             </div>
             <div class="card terminal-style">
                 <h3>Education:</h3><br>
                 <div class="edu-item">
-                    <h4>Web Development Diploma</h4>
+                    <h4 style="color: var(--primary-blue);">Web Development Diploma</h4>
                     <p>Solicode - Tangier, Morocco</p>
                     <p class="date">2025 - Present</p>
                 </div><br>
                 <div class="edu-item">
-                    <h4>Management in College</h4>
-                    <p>University of Abdelmalek Essadi</p>
+                    <h4 style="color: var(--primary-blue);">Management in College</h4>
+                    <p>University of Abdelmalek Essadi - Tangier, Morocco</p>
                     <p class="date">2025 - Present</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE & PROJECTS SECTION -->
     <section id="experience" class="section-container">
         <h2 class="section-title">EXPERIENCE & PROJECTS</h2>
-        
-        <!-- Project 1 -->
         <div class="project-card">
             <div class="project-info">
                 <h3>Responsive Portfolio Project</h3>
@@ -107,7 +106,6 @@
             </div>
         </div>
 
-        <!-- Project 2 Placeholder -->
         <div class="project-card">
             <div class="project-info">
                 <h3>Recipe List App</h3>
@@ -129,18 +127,34 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section-container">
-        <h2 class="section-title">CONTACT</h2>
-        <div class="terminal-style contact-box">
-            <p>Ready to build something logic driven? Drop a message.</p>
-            <div class="socials">
-                <a href="mailto:ahmedelmorabiti123460@gmail.com">Email</a><br>
-                <a href="www.linkedin.com/in/ahmed-el-morabiti-796962406">LinkedIn</a><br>
-                <a href="https://github.com/qzx03">GitHub</a>
-            </div>
+<section id="contact" class="section-container">
+    <h2 class="section-title">CONTACT</h2>
+    <div class="contact-wrapper">
+        <div class="contact-header">
+            <p>Ready to build something logic driven? Let's connect.</p>
         </div>
-    </section>
+        
+        <div class="contact-grid">
+            <a href="mailto:ahmedelmorabiti123460@gmail.com" class="contact-card">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+                <p>Drop a message</p>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/ahmed-el-morabiti-796962406" target="_blank" class="contact-card">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+                <p>Professional network</p>
+            </a>
+            
+            <a href="https://github.com/qzx03" target="_blank" class="contact-card">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+                <p>View my logic</p>
+            </a>
+        </div>
+    </div>
+</section>
 </main>
 
 <script src="script.js"></script>
